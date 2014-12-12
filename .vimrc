@@ -1,7 +1,13 @@
+"powerline
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+let g:airline_powerline_fonts = 1
+
 if has('vim_starting')
 	set nocompatible               " Be iMproved
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+syntax on
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
@@ -19,13 +25,19 @@ NeoBundle 'Shougo/vimproc', {
   \    },
   \ }
 
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'vim-scripts/ScrollColors'
+NeoBundle 'freeo/vim-kalisi'
+NeoBundle 'junegunn/seoul256.vim'
+NeoBundle 'vimwiki/vimwiki'
+
+NeoBundle 'sudar/vim-arduino-syntax'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'bling/vim-airline'
 NeoBundle 't9md/vim-choosewin'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'junegunn/vim-easy-align'
@@ -34,6 +46,15 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
+
+NeoBundle 'christoomey/vim-tmux-navigator'
+
+"clojure
+NeoBundle 'tpope/vim-classpath'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'jpalardy/vim-slime'
 
 " NeoBundle 'zhaocai/GoldenView.Vim' "Always have a nice view for vim split windows
 
@@ -262,4 +283,12 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 set noea
 
+let g:tmux_navigator_no_mappings = 1
 
+nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+
+let g:tmux_navigator_save_on_switch = 1
