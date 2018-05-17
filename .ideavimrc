@@ -1,0 +1,40 @@
+let mapleader = ","
+
+" highlight matches with last search pattern
+set hlsearch
+
+" show where search pattern typed so far matches
+set incsearch
+
+" No sounds
+set visualbell
+set noerrorbells
+
+" Vim surround emulation
+set surround
+
+" Show current mode
+set showmode
+
+" Copy from VIM to clipboard
+set clipboard=unnamed
+
+" Don't over-ride yanked shit!
+xnoremap p "_dP
+
+" Highlight current line
+set cursorline
+
+" Better split navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Run
+nnoremap <leader>r :action Run<cr>
