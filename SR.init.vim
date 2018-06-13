@@ -98,6 +98,7 @@ Plug 'scrooloose/syntastic'
 Plug 'xolox/vim-notes'
 Plug 'junegunn/vim-emoji'
 Plug 'morhetz/gruvbox'
+Plug 'enricobacis/vim-airline-clock'
 
 " utilities
 "Plug 'dkprice/vim-easygrep'
@@ -133,9 +134,10 @@ inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 filetype plugin indent on     " Required!
 
 set background=dark
-"autocmd ColorScheme janah highlight Normal ctermbg=235
+" autocmd ColorScheme janah highlight Normal ctermbg=235
 colorscheme onedark
 "colorscheme deus
+" colorscheme space-vim-dark
 hi Comment cterm=italic
 set t_Co=256
 " in case t_Co alone doesn't work, add this as well:
@@ -299,7 +301,7 @@ set backupskip=/tmp/*,/private/tmp/*
 "au FocusLost * :wa
 
 " 80 gray bar
-set colorcolumn=160
+set colorcolumn=120
 
 " Numbers and Borders`
 " no line numbers (do we really need?)
@@ -317,7 +319,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set wrap
-set textwidth=160
+set textwidth=120
 set formatoptions=qrn1
 "set colorcolumn=+1
 "}}}
